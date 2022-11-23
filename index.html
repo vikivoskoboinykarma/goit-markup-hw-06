@@ -441,6 +441,20 @@
             </li>
           </ul>
         </section>
+
+        <div class="">
+          <form class="footer-form">
+            <label class="footer-label">
+              Підпишіться на розсилку
+              <input type="email" class="footer-input" name="user-mail" 
+              placeholder="E-mail" required />
+            </label>
+            <button type="submit" class="btn">Підписатися</button>
+            <svg class="icon-form-footer" width="16" height="15">
+              <use href="./img/symbol-defs.svg#icon-icon-send"></use>
+            </svg>
+          </form>
+        </div>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -451,7 +465,64 @@
           </svg>
         </button>
       </div>
+      <form class="form js-speaker-form">
+        <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
+        <div class="form-fild">
+          <label for="name" class="form-label">
+            <svg class="label-icon">
+            <use href="./img/symbol-defs.svg#icon-person"></use>
+          </svg>
+            Ім'я</label>
+          <input
+            type="text"
+            class="form-input"
+            name="name"
+            id="name"
+            autofocus
+          />
+        </div>
+        <div class="form-fild">
+          <label for="tel" class="form-label">Телефон</label>
+          <input type="tel" class="form-input" name="tel" id="tel" />
+        </div>
+        <div class="form-fild">
+          <label for="email" class="form-label">Пошта</label>
+          <input type="email" class="form-input" name="email" id="email" />
+        </div>
+        <div class="form-fild">
+          <label for="comment" class="form-label"> Коментар</label>
+          <textarea
+            class="comment"
+            name="comment"
+            id="comment"
+            rows="5"
+            placeholder="Введіть текст"
+          ></textarea>
+        </div>
+        <div class="form-fild">
+          <input type="checkbox" class="form-input" name="policy" id="policy" />
+          <label for="policy" class="form-label"
+            >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+          </label>
+        </div>
+        <button class="form-btn" type="submit">Відправити</button>
+      </form>
     </div>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
