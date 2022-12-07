@@ -464,7 +464,7 @@
             <use href="./img/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
-      </div>
+      
       <form class="form js-speaker-form">
         <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
         <div class="form-fild">
@@ -508,13 +508,20 @@
           ></textarea>
         </div>
         <div class="form-fild">
-          <input type="checkbox" class="form-input" name="policy" id="policy" />
+          
           <label for="policy" class="form-label"
-            >Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+            > <span class="icon-wrapper">
+            <input type="checkbox" class="checkbox" name="policy" id="policy" value="check"/>
+             <svg class="checkbox-icon"  width="11"  height="8" >
+            <use href="./img/symbol-defs.svg#icon-check"></use>
+          </svg>
+            Погоджуюся з розсилкою та приймаю  <a href="" class="form-link">Умови договору</a>
+            </span>
           </label>
         </div>
         <button class="form-btn" type="submit">Відправити</button>
       </form>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
     <script>
