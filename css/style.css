@@ -516,11 +516,14 @@ margin-right: 0;
 .footer {
   background-color: var(--hero-background);
   display: flex;
+    padding-top: 60px;
+  padding-bottom: 60px;
 }
 .cell {
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  align-items: baseline;
+  justify-content: space-between;
+
 }
 
 .adress {
@@ -555,7 +558,7 @@ margin-right: 0;
 }
 
 .join {
-  padding-top: 12px;
+ 
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -599,7 +602,7 @@ margin-right: 0;
 .footer-form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   margin-left: 93px;
 }
 
@@ -653,7 +656,6 @@ margin-right: 0;
   width: 200px;
   height: 50px;
   margin-left: 12px;
-  margin-top: 50px;
   padding-left: 28px;
   padding-right: 62px;
 
@@ -682,7 +684,7 @@ margin-right: 0;
   position: absolute;
   right: 28px;
   top: 50%;
-  transform: translateY(-37%);
+  transform: translateY(37%);
 }
 
 /* portfolio*/
@@ -950,6 +952,7 @@ textarea {
   display: flex;
   flex-direction: column;
   letter-spacing: 0.01em;
+    margin-bottom: 10px;
 }
 
 .form-label {
@@ -967,7 +970,7 @@ textarea {
   display: flex;
   flex-direction: column;
   margin-top: 4px;
-  margin-bottom: 10px;
+
   padding-left: 42px;
 }
 
@@ -977,7 +980,7 @@ textarea {
   left: 12px;
   width: 18px;
   height: 18px;
-  transform: translateY(-15%);
+  transform: translateY(10%);
   fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -994,6 +997,15 @@ textarea {
   fill: #2196f3;
 }
 
+.form-comment{
+  position: relative;
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+
 .comment {
   font-weight: 400;
 font-size: 12px;
@@ -1001,7 +1013,7 @@ line-height: 1.17;
 letter-spacing: 0.01em;
   padding: 12px 16px;
   margin-top: 4px;
-  margin-bottom: 20px;
+ 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   color: rgba(117, 117, 117, 0.5);
@@ -1111,6 +1123,7 @@ letter-spacing: 0.01em;
 .checkbox:checked + .icon-wrapper {
   background-color: #2196f3;
   fill: transparent;
+  border: transparent;
 }
 
 .checkbox:checked + .icon-wrapper .checkbox-icon {
